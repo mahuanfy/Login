@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="login@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.1">
+    <root id="1"/>
+    <schema id="2" parent="1" name="login">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="db_recover"/>
+    <schema id="4" parent="1" name="eudsstest"/>
+    <schema id="5" parent="1" name="information_schema"/>
+    <schema id="6" parent="1" name="mybatis"/>
+    <schema id="7" parent="1" name="mysql"/>
+    <schema id="8" parent="1" name="performance_schema"/>
+    <schema id="9" parent="1" name="sams"/>
+    <schema id="10" parent="1" name="shiro"/>
+    <schema id="11" parent="1" name="ssm"/>
+    <schema id="12" parent="1" name="stuInfo"/>
+    <schema id="13" parent="1" name="stuinfo"/>
+    <schema id="14" parent="1" name="sys"/>
+    <schema id="15" parent="1" name="test"/>
+    <table id="16" parent="2" name="login"/>
+    <column id="17" parent="16" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="18" parent="16" name="username">
+      <Position>2</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="19" parent="16" name="password">
+      <Position>3</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="20" parent="16" name="sex">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="21" parent="16" name="date">
+      <Position>5</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <key id="22" parent="16" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>
