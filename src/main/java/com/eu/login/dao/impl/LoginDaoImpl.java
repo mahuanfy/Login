@@ -3,8 +3,6 @@ package com.eu.login.dao.impl;
 import com.eu.login.dao.LoginDao;
 import com.eu.login.entity.Login;
 import com.eu.login.utils.JdbcUtil;
-import jdk.nashorn.internal.scripts.JD;
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -47,7 +45,7 @@ public class LoginDaoImpl implements LoginDao {
     }
 
     @Override
-    public void register(Login login)  {
+    public void register(Login login) {
         try {
             //获取连接
             conn = JdbcUtil.getConnect();
@@ -61,10 +59,10 @@ public class LoginDaoImpl implements LoginDao {
             pstmt.setString(3, login.getSex());
 
             pstmt.executeUpdate();
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
-        }finally {
-            JdbcUtil.close(pstmt,conn);
+        } finally {
+            JdbcUtil.close(pstmt, conn);
         }
     }
 }
