@@ -29,7 +29,6 @@ public class LoginDaoImpl implements LoginDao {
             //创建执行任务
 
             pstmt = conn.prepareStatement(sql);
-
             pstmt.setString(1, login.getUsername());
             pstmt.setString(2, login.getPassword());
             rs = pstmt.executeQuery();
@@ -45,5 +44,27 @@ public class LoginDaoImpl implements LoginDao {
             JdbcUtil.close(rs, pstmt, conn);
         }
         return null;
+    }
+
+    @Override
+    public void register(Login login)  {
+        try {
+            //获取连接
+            conn = JdbcUtil.getConnect();
+
+            String sql = "insert into login (username,password,sex) values(?,?,?)";
+
+            pstmt = conn.prepareStatement(sql);
+
+            pstmt.setString(1, login.getUsername());
+            pstmt.setString(2, login.getPassword());
+            pstmt.setString(3, login.getSex());
+
+            pstmt.executeUpdate();
+        }catch (Exception e){
+            e.printStackTrace();
+        }finally {
+            JdbcUtil.close(pstmt,conn);
+        }
     }
 }

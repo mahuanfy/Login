@@ -19,30 +19,31 @@
     <schema id="13" parent="1" name="stuinfo"/>
     <schema id="14" parent="1" name="sys"/>
     <schema id="15" parent="1" name="test"/>
-    <table id="16" parent="2" name="login"/>
-    <column id="17" parent="16" name="id">
+    <schema id="16" parent="1" name="EyeCare"/>
+    <table id="17" parent="2" name="login"/>
+    <column id="18" parent="17" name="id">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="18" parent="16" name="username">
+    <column id="19" parent="17" name="username">
       <Position>2</Position>
       <DataType>varchar(20)|0</DataType>
     </column>
-    <column id="19" parent="16" name="password">
+    <column id="20" parent="17" name="password">
       <Position>3</Position>
       <DataType>varchar(20)|0</DataType>
     </column>
-    <column id="20" parent="16" name="sex">
+    <column id="21" parent="17" name="sex">
       <Position>4</Position>
-      <DataType>int(11)|0</DataType>
+      <DataType>varchar(20)|0</DataType>
     </column>
-    <column id="21" parent="16" name="date">
+    <column id="22" parent="17" name="date">
       <Position>5</Position>
       <DataType>datetime|0</DataType>
     </column>
-    <key id="22" parent="16" name="PRIMARY">
+    <key id="23" parent="17" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>

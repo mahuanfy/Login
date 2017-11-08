@@ -4,7 +4,6 @@ import com.eu.login.entity.Login;
 import com.eu.login.service.LoginService;
 import com.eu.login.service.impl.LoginServiceImpl;
 
-import javax.jws.WebService;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -16,8 +15,8 @@ import java.io.IOException;
  * Created by 马欢欢 on 17-11-6.
  *
  */
-@WebServlet("/login")
-public class LoginServlet extends HttpServlet {
+@WebServlet("/register")
+public class registerServlet extends HttpServlet {
     LoginService loginService = new LoginServiceImpl();
 
     @Override
@@ -27,17 +26,13 @@ public class LoginServlet extends HttpServlet {
         Login login = new Login();
         String username = req.getParameter("username");
         String password = req.getParameter("password");
+        String sex = req.getParameter("sex");
         login.setUsername(username);
         login.setPassword(password);
+        login.setSex(sex);
         try {
-            Login user = loginService.login(login);
-            if(user!=null){
-                req.getSession().setAttribute("user",user);
-                resp.sendRedirect(req.getContextPath()+"/page/success.jsp");
-            }else{
-                req.setAttribute("err","用户名或密码有误，请重新登录");
-                req.getRequestDispatcher("/index.jsp").forward(req,resp);
-            }
+           loginService.register(login);
+            resp.sendRedirect(req.getContextPath()+"/index.jsp");
         } catch (Exception e) {
             e.printStackTrace();
         }

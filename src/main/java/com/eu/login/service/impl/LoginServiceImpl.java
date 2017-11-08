@@ -17,4 +17,9 @@ public class LoginServiceImpl implements LoginService {
 
         return user;
     }
+
+    @Override
+    public void register(Login login) throws Exception {
+     loginDao.register(login);
+    }
 }

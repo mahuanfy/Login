@@ -1,3 +1,4 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,8 +11,8 @@
 <body style="background-color: grey">
 <div class="container" style="background-color: white; margin-top: 200px;width: 500px;">
     <div class="text-center" style="margin: 50px;">
-        <h1 class="h1">登录界面</h1>
-        <form action="/login" method="post">
+        <h1 class="h1">注册界面</h1>
+        <form action="/register" method="post">
             <div class="form-group input-group">
                 <label class="input-group-addon" for="username">用户名</label>
                 <input type="text" class="form-control" id="username" name="username" placeholder="请输入用户名">
@@ -20,7 +21,22 @@
                 <label class="input-group-addon" for="password">密码</label>
                 <input type="password" class="form-control" id="password" name="password" placeholder="请输入密码">
             </div>
-            <button type="submit" class="btn btn-success btn-group-sm">登录</button>
+            <div class="form-group input-group">
+                <label class="input-group-addon" for="password">确认密码</label>
+                <input type="password" class="form-control" id="password2"  placeholder="请输入密码">
+            </div>
+            <div class="form-group input-group">
+                <label class="input-group-addon">性别</label>
+                <div class="radio">
+                    <label class="radio-inline">
+                        <input type="radio" value="男" name="sex" checked>男
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" value="女"name="sex" >女
+                    </label>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-success btn-group-sm">注册</button>
         </form>
     </div>
 </div>

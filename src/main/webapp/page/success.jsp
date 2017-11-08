@@ -1,10 +1,4 @@
-<%@ page import="com.eu.login.entity.Login" %><%--
-  Created by IntelliJ IDEA.
-  User: ubuntu
-  Date: 17-11-6
-  Time: 下午5:29
-  To change this template use File | Settings | File Templates.
---%>
+<%@ page import="com.eu.login.entity.Login" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>

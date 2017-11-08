@@ -14,4 +14,11 @@ public interface LoginDao {
      * @throws Exception
      */
     Login login(Login login)throws Exception;
+
+    /**
+     * 注册
+     * @param login
+     * @throws Exception
+     */
+    void register(Login login)throws Exception;
 }

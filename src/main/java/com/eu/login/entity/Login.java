@@ -7,7 +7,7 @@ public class Login {
     private int id;
     private String username;
     private String password;
-    private int sex;
+    private String sex;
     private String date;
 
     public int getId() {
@@ -34,11 +34,11 @@ public class Login {
         this.password = password;
     }
 
-    public int getSex() {
+    public String getSex() {
         return sex;
     }
 
-    public void setSex(int sex) {
+    public void setSex(String sex) {
         this.sex = sex;
     }
 
